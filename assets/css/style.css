@@ -147,7 +147,8 @@ article.home h4 a:hover {
 
 footer {
 	padding-top: 15px;
-	font-family: 'Noto Sans';
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 70%;
 }
 
 /* nav-vertical-tabs component */

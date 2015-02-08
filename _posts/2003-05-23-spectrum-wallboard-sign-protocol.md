@@ -2,7 +2,7 @@
 layout: post
 title:  "Spectrum Wallboard Sign Protocol"
 date:   2003-05-23 00:00
-categories: Reference
+tags: [reference]
 ---
 This document was created to document the serial-line protocol to control [Spectrum](http://www.specorp.com/)
 signs, which come in many sizes and flavors. Spectrum is unwilling to

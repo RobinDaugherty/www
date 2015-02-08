@@ -2,9 +2,7 @@
 layout: post
 title:  "JetBlue IT Woes"
 date:   2007-11-01 14:11
-categories: [Project]
-tags: [windows]
-categories: Complaints
+tags: [software, complaint]
 ---
 I have been flying JetBlue for almost a year. And, as I sit in an airport terminal, having missing my JetBlue flight, I feel it's the right time to vent about my problems with JetBlue.
 

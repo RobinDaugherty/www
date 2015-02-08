@@ -2,9 +2,7 @@
 layout: post
 title:  "Car Stereo Project"
 date:   2003-11-14 00:00
-categories: [Project]
-tags: [hardware, car]
-categories: 
+tags: [hardware, software, car, project]
 ---
 In January of 2003, the stereo was stolen from my car.
 I have been without a sound system since, and I'm getting quite tired of listening to a tiny little radio with poor reception.

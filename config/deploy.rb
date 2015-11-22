@@ -10,6 +10,9 @@ set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rben
 set :rbenv_map_bins, %w(rake gem bundle ruby rails)
 set :rbenv_roles, :all
 
+set :bundle_bins, fetch(:bundle_bins) + %w(jekyll)
+set :rbenv_map_bins, fetch(:rbenv_map_bins) + %w(jekyll)
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

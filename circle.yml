@@ -1,0 +1,6 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - ssh-add ~/.ssh/id_circleci_github
+      - 'bundle exec cap production deploy'

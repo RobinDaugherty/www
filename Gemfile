@@ -8,4 +8,4 @@ gem 'kramdown'
 gem 'capistrano'
 gem 'capistrano-bundler', require: false
 gem 'capistrano-rbenv', require: false
-gem 'capistrano-jekyll', require: false, github: 'RobinDaugherty/capistrano-jekyll'
+gem 'capistrano-jekyll', require: false

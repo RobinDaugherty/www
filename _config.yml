@@ -1,6 +1,6 @@
 # Site settings
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.robindaugherty.net"
+url: "https://www.robindaugherty.net"
 
 # Build settings
 markdown: kramdown

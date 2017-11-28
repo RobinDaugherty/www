@@ -3,6 +3,7 @@ layout: post
 title:  "One Weird Telecomm Project"
 date:   2008-03-23 23:20
 tags: [telecomm, project]
+category: Technical
 ---
 In 2003, I worked at a company with offices spread over four states in the Midwest United States.
 

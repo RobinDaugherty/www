@@ -3,6 +3,7 @@ layout: post
 title:  "vlcdownload.net Provides Adware-Infected VLC"
 date:   2009-12-27 15:30
 tags: [scam, complaint]
+category: Complaints
 ---
 A couple of weeks ago, my wife needed to download VLC on her Windows laptop. She searched Google for "download VLC" and used the first link she found.
 

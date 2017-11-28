@@ -2,7 +2,8 @@
 layout: post
 title:  "at&t Is Incompetent"
 date:   2008-09-06 01:47
-tags: [at&t, complaint]
+tags: [complaint]
+category: Complaints
 ---
 AT&T was once a powerhouse of intelligence and technology.
 Yet at every turn, the company now known as "at&t" disappoints me further.

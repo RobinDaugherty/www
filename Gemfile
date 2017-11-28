@@ -9,3 +9,6 @@ gem 'capistrano'
 gem 'capistrano-bundler', require: false
 gem 'capistrano-rbenv', require: false
 gem 'capistrano-jekyll', require: false
+
+# For CI tests
+gem 'html-proofer'

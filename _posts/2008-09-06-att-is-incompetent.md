@@ -2,7 +2,7 @@
 layout: post
 title:  "at&t Is Incompetent"
 date:   2008-09-06 01:47
-tags: [at&t, complaint]
+tags: [complaint]
 category: Complaints
 ---
 AT&T was once a powerhouse of intelligence and technology.

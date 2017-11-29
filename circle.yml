@@ -1,6 +1,9 @@
 machine:
   environment:
     NOKOGIRI_USE_SYSTEM_LIBRARIES: true # speeds up installation of html-proofer
+dependencies:
+  post:
+    - gem install rbnacl-libsodium
 test:
   pre:
     - bundle exec jekyll build

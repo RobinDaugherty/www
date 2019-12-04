@@ -18,7 +18,7 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
-            twitter
+            twitterHandle
           }
         }
       }
@@ -57,7 +57,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.twitter,
+          content: site.siteMetadata.twitterHandle,
         },
         {
           name: `twitter:title`,

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Page from "../components/page"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = ({
@@ -18,7 +18,7 @@ const IndexPage = ({
   )).sort((a, b) => a.date > b.date);
 
   return (
-    <Page title="About">
+    <Layout>
       <SEO title="Home" />
 
       <p>When I was 10 years old, I was given an old, broken, computer, <a href="http://www.thepcmuseum.net/details.php?RECORD_KEY%28museum%29=id&amp;id(museum)=753">some sort of Xerox terminal</a> that ran CP/M.
@@ -76,7 +76,7 @@ const IndexPage = ({
           </li>
         ))}
       </ul>
-    </Page>
+    </Layout>
   )
 }
 

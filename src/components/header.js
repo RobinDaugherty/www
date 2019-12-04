@@ -1,72 +1,100 @@
-import { Link } from "gatsby"
+import { Link, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({
-  title,
-  githubHandle,
-  twitterHandle,
-  gravatarEmailHash,
-}) => (
-  <header className="site-header">
-    <Link to="/" className="avatar">
-      <img
-        src={`https://www.gravatar.com/avatar/${gravatarEmailHash}?s=300`}
-        className="avatar"
-        alt="Drawing of Robin Daugherty"
-      />
-    </Link>
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+          githubHandle
+          twitterHandle
+          pinterestUsername
+          linkedin
+          stackoverflowCv
+          bio
+          gravatarEmailHash
+        }
+      }
+    }
+  `);
+  const {
+    title,
+    bio,
+    email,
+    githubHandle,
+    twitterHandle,
+    pinterestUsername,
+    linkedin,
+    stackoverflowCv,
+    gravatarEmailHash,
+  } = data.site.siteMetadata;
 
-    <nav className="navbar navbar-default visible-xs" role="navigation">
-      <div className="navbar-header">
-        {githubHandle && (
-          <a type="button" className="navbar-toggle nav-link" href={`https://github.com/${githubHandle}`}>
-            <i className="fa fa-github"></i>
-          </a>
-        )}
-        {twitterHandle && (
-          <a type="button" className="navbar-toggle nav-link" href={`https://twitter.com/${twitterHandle}`}>
-            <i className="fa fa-twitter"></i>
-          </a>
-        )}
-        <Link className="navbar-brand" to="/">
-          <img src={`https://www.gravatar.com/avatar/{gravatarEmailHash}?s=80`} alt='' className="img-circle" />
-          {title}
-        </Link>
-      </div>
+  return (
+    <header className="site-header">
+      <Link to="/" className="avatar">
+        <img
+          src={`https://www.gravatar.com/avatar/${gravatarEmailHash}?s=300`}
+          className="avatar"
+          alt="Robin Daugherty"
+        />
+      </Link>
 
-      <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul className="nav navbar-nav">
-          <li className="active"><Link to="/">Home</Link></li>
+      <div className="things">
+        <div className="title">
+          <span className='name'>Robin Daugherty</span>
+          <span className='tagline'>Software Engineer and Systems Architect</span>
+        </div>
+
+        <ul className="contact-methods">
+          {githubHandle && (
+            <li className='github'>
+              <a href={`https://github.com/${githubHandle}`}>
+                GitHub
+              </a>
+            </li>
+          )}
+          {stackoverflowCv && (
+            <li className='stackoverflow'>
+              <a href={`https://stackoverflow.com/cv/${stackoverflowCv}`}>
+                Stack Overflow
+              </a>
+            </li>
+          )}
+          {twitterHandle && (
+            <li className='twitter'>
+              <a href={`https://twitter.com/${twitterHandle}`}>
+                Twitter
+              </a>
+            </li>
+          )}
+          {linkedin && (
+            <li className='linkedin'>
+              <a href={`https://linkedin.com/in/${linkedin}`}>
+                LinkedIn
+              </a>
+            </li>
+          )}
+          {pinterestUsername && (
+            <li className='pinterest'>
+              <a href={`https://pinterest.com/${pinterestUsername}`}>
+                Pinterest
+              </a>
+            </li>
+          )}
         </ul>
       </div>
-    </nav>
-
-    <div className="btn-group hidden-xs" id="nav-menu">
-      <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        <i className="fa fa-bars"></i>
-      </button>
-      <ul className="dropdown-menu" role="menu">
-        <li><Link to="/"><i className="fa fa-home"></i>Home</Link></li>
-      </ul>
-    </div>
-
-  </header>
-)
-    // <!-- <div className="trigger">
-    //   {% for page in site.pages %}
-    //     {% if page.title %}
-    //     <a className="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-    //     {% endif %}
-    //   {% endfor %}
-    // </div> -->
+    </header>
+  )
+}
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  title: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  title: ``,
 }
 
 export default Header

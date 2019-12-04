@@ -47,7 +47,7 @@ one-character name. You must send a command to reserve memory with the
 name of the file you will be using. This is done with a [Write Special Functions](#Write_Special_Functions) command (see the table).
 
 ## Type Codes
-<table border="1">
+<table>
 	<thead>
 		<tr>
 			<th>Char</th>
@@ -210,7 +210,7 @@ name of the file you will be using. This is done with a [Write Special Functions
 </table>
 
 ## Command Codes
-<table border="1">
+<table>
 	<thead>
 		<tr>
 			<th>Char</th>
@@ -293,7 +293,7 @@ message.
 
 Send 0x1c followed by a single character.
 
-<table border="1">
+<table>
 	<thead>
 		<tr>
 			<th>Char</th>
@@ -354,7 +354,7 @@ Send 0x1b followed by one or two characters.
 
 A transition is sent before the text which will be 'brought in' with the transition.
 
-<table border="1">
+<table>
 	<thead>
 		<tr>
 			<th>Identifier</th>
@@ -512,7 +512,7 @@ A transition is sent before the text which will be 'brought in' with the transit
 ### Speed
 To adjust the speed of transitions, send one of the following:
 
-<table border="1">
+<table>
 	<thead>
 		<tr>
 			<th>Type Code</th>
@@ -546,7 +546,7 @@ To adjust the speed of transitions, send one of the following:
 ### Text Formatting
 To format text, place in front of the text to be altered.
 
-<table border="1">
+<table>
 	<thead>
 		<tr>
 			<th>Code</th>
@@ -633,10 +633,10 @@ To format text, place in front of the text to be altered.
 	</tbody>
 </table>
 
-## Write Special Functions {#Write_Special_Functions}
+## Write Special Functions
 These are used to for many different things, which are listed below.  This is only a partial list, however.
 
-<table border="1">
+<table>
 	<thead>
 		<tr>
 			<th>Type Code</th>

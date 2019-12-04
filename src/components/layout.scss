@@ -24,7 +24,7 @@ header {
 
   .things {
     flex: 1 1 auto; 
-    padding-top: .2in;
+    padding-top: .15in;
 
     .title {
       .name {
@@ -44,23 +44,32 @@ header {
         list-style-type: none;
         display: inline-block;
         a {
-          color: white;
+          display: inline-block;
+          background-color: white;
+          color: black;
+          width: 1.6em;
+          height: 1.6em;
+          line-height: 1.6em;
+          text-align: center;
+          font-size: 14pt;
+          border-radius: 3px;
         }
-        .twitter {
-        /*article .share .twitter:hover {*/
-          color: #00ACEE;
-          border-color: #00ACEE;
+        &.github:hover a {
+          color: #444;
         }
-        .linkedin {
-          color: #1D87BD;
+        &.twitter:hover a {
+          color: #38A1F3;
         }
-        .envelope {
-          color: #E93E30;
+        &.linkedin:hover a {
+          color: #0e76a8;
         }
-        .pinterest {
-          color: #CC2127;
+        &.stackoverflow:hover a {
+          color: #ef8236;
         }
-        .rss {
+        &.pinterest:hover a {
+          color: #BD081C;
+        }
+        &.rss:hover a {
           color: #e74c3c;
         }
       }

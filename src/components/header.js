@@ -1,6 +1,14 @@
 import { Link, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGithubSquare,
+  faStackOverflow,
+  faTwitterSquare,
+  faPinterestSquare,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -51,35 +59,35 @@ const Header = () => {
           {githubHandle && (
             <li className='github'>
               <a href={`https://github.com/${githubHandle}`}>
-                GitHub
+                <FontAwesomeIcon icon={faGithubSquare} alt='GitHub' />
               </a>
             </li>
           )}
           {stackoverflowCv && (
             <li className='stackoverflow'>
               <a href={`https://stackoverflow.com/cv/${stackoverflowCv}`}>
-                Stack Overflow
+                <FontAwesomeIcon icon={faStackOverflow} alt='StackOverflow' />
               </a>
             </li>
           )}
           {twitterHandle && (
             <li className='twitter'>
               <a href={`https://twitter.com/${twitterHandle}`}>
-                Twitter
+                <FontAwesomeIcon icon={faTwitterSquare} alt='Twitter' />
               </a>
             </li>
           )}
           {linkedin && (
             <li className='linkedin'>
               <a href={`https://linkedin.com/in/${linkedin}`}>
-                LinkedIn
+                <FontAwesomeIcon icon={faLinkedin} alt='LinkedIn' />
               </a>
             </li>
           )}
           {pinterestUsername && (
             <li className='pinterest'>
               <a href={`https://pinterest.com/${pinterestUsername}`}>
-                Pinterest
+                <FontAwesomeIcon icon={faPinterestSquare} alt='Pinterest' />
               </a>
             </li>
           )}

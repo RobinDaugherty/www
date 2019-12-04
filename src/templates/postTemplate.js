@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Page from "../components/page"
 import SEO from "../components/seo"
@@ -25,6 +25,8 @@ export default function Template({
 
         <a className="u-url" href={path} hidden>self</a>
       </article>
+
+      <p><Link to='/'>Back to home</Link></p>
     </Page>
   )
 }

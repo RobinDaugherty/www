@@ -113,6 +113,6 @@ Unless you’re posting announcements. 30 minutes spent crafting a 3-paragraph r
 
 ## More Reading
 
-Slack Etiquette, Part 1: Organize & Be Mindful | Art & Science
-Slack Etiquette: Part 2 - Respect your team, and be Mindful | Art & Science
-The definitive guide to Slack etiquette | Hiver Blog
+- [Slack Etiquette, Part 1: Organize & Be Mindful | Art & Science](https://artscience.ca/slack-etiquette-part-1-organize-be-mindful/)
+- [Slack Etiquette: Part 2 - Respect your team, and be Mindful | Art & Science](https://artscience.ca/slack-etiquette-part-2-respect-your-team-and-be-mindful/)
+- [The definitive guide to Slack etiquette | Hiver Blog](https://hiverhq.com/blog/slack-etiquette/)

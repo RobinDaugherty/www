@@ -44,6 +44,7 @@ Rename it to `#announcements`. Don’t limit which people are allowed to post in
 But letting everyone in the organization communicate in #announcements means that they can discuss, in a thread, things that are posted there. This should lead to more discourse and a feeling of openness.
 
 ### Use #random
+
 If people are together in an actual (physical) room, they would say funny things to everyone in the room. Give them an outlet for things like that: use #random for funny things. Build camaraderie and culture.
 
 ### Channel for each office/region
@@ -76,6 +77,8 @@ People might be interested in whether you’re in the office, but they don’t n
 
 Just ask your question or make your statement. Don’t do this:
 
+![Chatty Direct Message](/images/slack-chatty-direct-message.png)
+
 The above caused 3 notifications to be sent, and there’s nothing actionable yet!
 
 ### Mind a channel’s topic and not its members’ teams or interests
@@ -87,7 +90,6 @@ Don’t pick a channel based on who you want to share information with. Look for
 This is the goal of using Slack. When new people join, they can find answers to their questions. Otherwise, the organization is constantly answering the same questions. But not everyone at the organization, just the ones that know things. You know, the ones with the least time to answer questions.
 
 ### When answering a question, provide enough context for future searches.
-
 
 Don’t just post a snippet of code. Describe it with words that will be used to search for it later.
 
@@ -102,6 +104,8 @@ Not always, but replies might send notifications when there’s no need for the 
 ### Use the Up Arrow to edit
 
 Don’t post messages correcting your mistakes, correct them. More messages mean more notifications.
+
+![The Up Key](/images/slack-up-key.jpeg)
 
 ### Don’t write emails
 

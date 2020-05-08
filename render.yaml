@@ -5,59 +5,61 @@ services:
   buildCommand: yarn build
   staticPublishPath: ./public
   pullRequestPreviewsEnabled: true
-    headers:
-    - path: /*
-      name: X-Frame-Options
-      value: sameorigin
-    routes:
-    - type: redirect
-      source: /about.html
-      destination: /
-    - type: redirect
-      source: /about/
-      destination: /
-    - type: redirect
-      source: /categories.html
-      destination: /
-    - type: redirect
-      source: /tags.html
-      destination: /
-    - type: redirect
-      source: /2003/05/23/spectrum-wallboard-sign-protocol.html
-      destination: /2003-05-23-spectrum-wallboard-sign-protocol
-    - type: redirect
-      source: /2003/11/14/car-stereo-project.html
-      destination: /2003-11-14-car-stereo-project
-    - type: redirect
-      source: /2007/11/01/jetblue-it-woes.html
-      destination: /2007-11-01-jetblue-it-woes
-    - type: redirect
-      source: /2008/03/23/one-weird-telecomm-project.html
-      destination: /2008-03-23-one-weird-telecomm-project
-    - type: redirect
-      source: /2008/09/06/att-is-incompetent.html
-      destination: /2008-09-06-att-is-incompetent
-    - type: redirect
-      source: /2009/12/27/adware-infected-vlc.html
-      destination: /2009-12-27-adware-infected-vlc
-    - type: redirect
-      source: /p/About_Robin/index.html
-      destination: /
-    - type: redirect
-      source: /p/Spectrum_Wallboard_Sign_Protocol/index.html
-      destination: /2003-05-23-spectrum-wallboard-sign-protocol
-    - type: redirect
-      source: /p/Car_stereo_project/index.html
-      destination: /2003-11-14-car-stereo-project
-    - type: redirect
-      source: /p/JetBlue_IT_woes/index.html
-      destination: /2007-11-01-jetblue-it-woes
-    - type: redirect
-      source: /p/One_weird_telecomm_project/index.html
-      destination: /2008-03-23-one-weird-telecomm-project
-    - type: redirect
-      source: /p/ATT_is_incompetent_part_1/index.html
-      destination: /2008-09-06-att-is-incompetent
-    - type: redirect
-      source: /p/Vlcdownload.net_provides_adware_infected_vlc/index.html
-      destination: /2009-12-27-adware-infected-vlc
+  domains:
+  - www.robindaugherty.net
+  headers:
+  - path: /*
+    name: X-Frame-Options
+    value: sameorigin
+  routes:
+  - type: redirect
+    source: /about.html
+    destination: /
+  - type: redirect
+    source: /about/
+    destination: /
+  - type: redirect
+    source: /categories.html
+    destination: /
+  - type: redirect
+    source: /tags.html
+    destination: /
+  - type: redirect
+    source: /2003/05/23/spectrum-wallboard-sign-protocol.html
+    destination: /2003-05-23-spectrum-wallboard-sign-protocol
+  - type: redirect
+    source: /2003/11/14/car-stereo-project.html
+    destination: /2003-11-14-car-stereo-project
+  - type: redirect
+    source: /2007/11/01/jetblue-it-woes.html
+    destination: /2007-11-01-jetblue-it-woes
+  - type: redirect
+    source: /2008/03/23/one-weird-telecomm-project.html
+    destination: /2008-03-23-one-weird-telecomm-project
+  - type: redirect
+    source: /2008/09/06/att-is-incompetent.html
+    destination: /2008-09-06-att-is-incompetent
+  - type: redirect
+    source: /2009/12/27/adware-infected-vlc.html
+    destination: /2009-12-27-adware-infected-vlc
+  - type: redirect
+    source: /p/About_Robin/index.html
+    destination: /
+  - type: redirect
+    source: /p/Spectrum_Wallboard_Sign_Protocol/index.html
+    destination: /2003-05-23-spectrum-wallboard-sign-protocol
+  - type: redirect
+    source: /p/Car_stereo_project/index.html
+    destination: /2003-11-14-car-stereo-project
+  - type: redirect
+    source: /p/JetBlue_IT_woes/index.html
+    destination: /2007-11-01-jetblue-it-woes
+  - type: redirect
+    source: /p/One_weird_telecomm_project/index.html
+    destination: /2008-03-23-one-weird-telecomm-project
+  - type: redirect
+    source: /p/ATT_is_incompetent_part_1/index.html
+    destination: /2008-09-06-att-is-incompetent
+  - type: redirect
+    source: /p/Vlcdownload.net_provides_adware_infected_vlc/index.html
+    destination: /2009-12-27-adware-infected-vlc

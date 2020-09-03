@@ -7,7 +7,7 @@ category: Soapbox
 ---
 ## Goals: Maximize Relevancy, Minimize Disruption
 
-We want everyone in our organization have the information they need to do their job most effectively.
+_We want everyone in our organization have the information they need to do their job most effectively._
 
 Each person using Slack relies on everyone else in the organization so that they can get the most our of Slack. When only a few people have poor Slack etiquette, other people turn on Do Not Disturb, mute channels, and turn off mobile notifications altogether. Then those other people miss information, sometimes important and timely information.
 

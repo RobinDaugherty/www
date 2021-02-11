@@ -35,7 +35,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: `/${node.parent.name}`,
+      path: `/article/${node.parent.name}`,
       component: postTemplate,
       context: {
         fileAbsolutePath: node.fileAbsolutePath,

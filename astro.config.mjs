@@ -26,9 +26,6 @@ export default defineConfig({
 	markdown: {
 		remarkPlugins: [imgAttr],
 	},
-	redirects: {
-		'/[slug]': '/posts/[slug]',
-	},
 	vite: {
 		css: {
 			preprocessorOptions: {

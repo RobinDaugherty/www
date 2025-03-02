@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import PostPreview from './PostPreview.astro';
+
+export type Props = {
+	posts: CollectionEntry<'post'>[];
+};
+const { posts } = Astro.props;
+---
+
+<div class="post-list">
+	{posts.map((post) => <PostPreview post={post} />)}
+</div>
+
+<style>
+	.post-list {
+		display: grid;
+		gap: 0.5rem;
+	}
+</style>

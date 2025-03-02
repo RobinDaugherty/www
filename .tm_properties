@@ -1,5 +1,5 @@
 tabSize = 2
-softTabs = true
-excludeDirectories = "{$excludeDirectories,tmp,log,public}"
-includeDirectories = "{$includeDirectories,.circleci}"
-includeFiles = "{$includeFiles,.rspec,.powder,.powenv,.eslintrc,.node-version,.gitignore,.env*,.babelrc}"
+softTabs = false
+excludeDirectories = "{$excludeDirectories,tmp,log,dist}"
+includeDirectories = "{$includeDirectories,.github,.vscode,.husky}"
+includeFiles = "{$includeFiles,.powder,.prettierrc,.prettierignore,.node-version,.gitignore,.env*,.editorconfig}"

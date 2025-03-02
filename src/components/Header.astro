@@ -1,0 +1,38 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<header class="site-header">
+	<a href="/" class="avatar">
+		<img
+			src={`https://www.gravatar.com/avatar/c03d217df4867dfb3b3674649fa92e5b?s=300`}
+			class="avatar"
+			alt="Robin Daugherty"
+		/>
+	</a>
+
+	<div class="things">
+		<div class="title">
+			<span class="name">Robin Daugherty</span>
+			<span class="tagline">Software Engineer and Systems Architect</span>
+		</div>
+
+		<ul class="contact-methods">
+			<li class="github">
+				<a href={`https://github.com/RobinDaugherty`}>
+					<Icon name="fa6-brands:square-github" title="GitHub" />
+				</a>
+			</li>
+			<li class="stackoverflow">
+				<a href={`https://stackoverflow.com/users/1589422/robin-daugherty`}>
+					<Icon name="fa6-brands:stack-overflow" title="StackOverflow" />
+				</a>
+			</li>
+			<li class="linkedin">
+				<a href={`https://linkedin.com/in/robindaugherty`}>
+					<Icon name="fa6-brands:linkedin" title="LinkedIn" />
+				</a>
+			</li>
+		</ul>
+	</div>
+</header>

@@ -1,0 +1,12 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Default.astro';
+import PostList from '../../components/PostList.astro';
+import { sortItemsByDateDesc } from '../../utils/data-utils';
+
+const posts = (await getCollection('post')).sort(sortItemsByDateDesc);
+---
+
+<Layout pageTitle="Posts">
+	<PostList posts={posts} />
+</Layout>

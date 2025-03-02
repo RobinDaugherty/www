@@ -1,52 +1,41 @@
 {
-  "name": "www-robindaugherty",
-  "private": true,
-  "description": "Robin Daugherty website.",
-  "version": "1.0.0",
-  "author": "Robin Daugherty <robin@robindaugherty.net>",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.25",
-    "@fortawesome/free-brands-svg-icons": "^5.11.2",
-    "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "@fortawesome/react-fontawesome": "^0.1.7",
-    "gatsby": "^2.17.11",
-    "gatsby-image": "^2.2.31",
-    "gatsby-plugin-google-analytics": "^2.1.29",
-    "gatsby-plugin-manifest": "^2.2.27",
-    "gatsby-plugin-offline": "^3.0.19",
-    "gatsby-plugin-react-helmet": "^3.1.14",
-    "gatsby-plugin-sass": "^2.1.24",
-    "gatsby-plugin-sharp": "^2.2.37",
-    "gatsby-source-filesystem": "^2.1.36",
-    "gatsby-transformer-remark": "^2.6.39",
-    "gatsby-transformer-sharp": "^2.3.3",
-    "node-sass": "^4.13.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-helmet": "^5.2.1"
-  },
-  "devDependencies": {
-    "prettier": "^1.19.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop -p 8007",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "yarn develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+	"name": "www-robindaugherty",
+	"type": "module",
+	"version": "2.0.0",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"prepare": "node .husky/install.mjs",
+		"lint": "astro check && pnpm prettier -w .",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.9.4",
+		"@astrojs/mdx": "^4.1.0",
+		"@astrojs/rss": "^4.0.11",
+		"@astrojs/sitemap": "^3.2.1",
+		"@fontsource/noto-sans": "^5.2.5",
+		"@fontsource/source-code-pro": "^5.2.5",
+		"@iconify-json/fa6-brands": "^1.2.5",
+		"astro-breakpoints": "^0.6.2",
+		"astro-icon": "^1.1.5",
+		"remark-imgattr": "^1.0.5",
+		"sass": "^1.85.1",
+		"sharp": "^0.33.5",
+		"typescript": "^5.8.2"
+	},
+	"devDependencies": {
+		"astro": "^5.4.1",
+		"husky": "^9.1.7",
+		"lint-staged": "^15.4.3",
+		"prettier": "^3.5.2",
+		"prettier-plugin-astro": "^0.14.1"
+	},
+	"packageManager": "pnpm@10.3.0+sha512.ee592eda8815a8a293c206bb0917c4bb0ff274c50def7cbc17be05ec641fc2d1b02490ce660061356bd0d126a4d7eb2ec8830e6959fb8a447571c631d5a2442d",
+	"lint-staged": {
+		"*.{astro,mdx,js,mjs,cjs,ts,json,yml,jsx,tsx,css}": [
+			"pnpm prettier --write"
+		]
+	}
 }

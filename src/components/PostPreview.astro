@@ -1,0 +1,48 @@
+---
+import { type CollectionEntry } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+
+type Props = {
+	post: CollectionEntry<'post'>;
+	class?: string;
+	layout?: 'grid' | 'horizontal' | 'vertical';
+};
+
+const { post, class: className } = Astro.props;
+const { title, publishedDate } = post.data;
+const layout = Astro.props.layout ?? 'grid';
+
+const path = `/posts/${post.slug}`;
+---
+
+<article class:list={[className, `layout-${layout}`]}>
+	<a href={path}>
+		<div class="title">
+			{title}
+		</div>
+		<div class="published-date">
+			<FormattedDate date={publishedDate} />
+		</div>
+	</a>
+</article>
+
+<style lang="scss">
+	article {
+		display: block;
+
+		a {
+			text-decoration: none;
+		}
+
+		.published-date {
+			display: block;
+			font-size: 0.75rem;
+			color: var(--gray-light);
+		}
+
+		.title {
+			display: block;
+			color: var(--black);
+		}
+	}
+</style>

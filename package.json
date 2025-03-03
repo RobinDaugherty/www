@@ -7,7 +7,7 @@
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"prepare": "node .husky/install.mjs",
-		"lint": "astro check && pnpm prettier -w .",
+		"lint": "astro check && pnpm prettier -c .",
 		"astro": "astro"
 	},
 	"dependencies": {

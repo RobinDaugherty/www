@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import DefaultLayout from './Default.astro';
+import Layout from './MainLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import { Picture } from 'astro:assets';
 
@@ -13,39 +13,59 @@ const { title, description, heroImage, publishedDate, updatedDate } = post.data;
 const { Content } = await post.render();
 ---
 
-<DefaultLayout pageTitle={title} pageDescription={description}>
+<Layout pageTitle={title} pageDescription={description}>
 	<article>
-		<content>
-			<header class="page-header">
+		<div class="article-header">
+			{
+				heroImage && (
+					<hero>
+						<Picture src={heroImage} alt="" />
+					</hero>
+				)
+			}
+			<h1>{title}</h1>
+			<div class="pub-date">
+				<FormattedDate date={publishedDate} />
 				{
-					heroImage && (
-						<hero>
-							<Picture src={heroImage} alt="" />
-						</hero>
+					updatedDate && (
+						<>
+							{' '}
+							<span>
+								(Updated on <FormattedDate date={updatedDate} />)
+							</span>
+						</>
 					)
 				}
-				<h1>{title}</h1>
-				<div class="pub-date">
-					<FormattedDate date={publishedDate} />
-					{
-						updatedDate && (
-							<>
-								{' '}
-								<span>
-									(Updated on <FormattedDate date={updatedDate} />)
-								</span>
-							</>
-						)
-					}
-				</div>
-			</header>
-			<Content />
-			<div class="article-body">
-				<slot />
-				<p><a href="/">Back to root</a></p>
 			</div>
-		</content>
+		</div>
+		<Content />
+		<p><a href="/">Back to root</a></p>
 	</article>
-</DefaultLayout>
+</Layout>
+<style is:global>
+	h1 {
+		font-size: 2em;
+	}
 
-<style lang="scss"></style>
+	.pub-date {
+		font-family: var(--font-headings);
+		font-size: 80%;
+		color: var(--color-secondary);
+	}
+
+	pre {
+		font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+	}
+
+	table {
+		border-collapse: collapse;
+		th,
+		td {
+			padding: 0.2em;
+			border: 1pt solid var(--color-secondary);
+		}
+		th {
+			text-align: left;
+		}
+	}
+</style>

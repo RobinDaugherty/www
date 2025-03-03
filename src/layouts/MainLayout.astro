@@ -1,7 +1,8 @@
 ---
-import '../styles/layout.scss';
-import '@fontsource/noto-sans';
-import '@fontsource/noto-sans/700.css';
+import '../styles/global.scss';
+import '@fontsource/source-sans-pro';
+import '@fontsource/source-sans-pro/600.css';
+import '@fontsource/source-sans-pro/900.css';
 import '@fontsource/source-code-pro';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
@@ -19,11 +20,6 @@ const { pageTitle, pageDescription, publishedDate } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />-->
-		<meta name="generator" content={Astro.generator} />
-		<title>Robin Daugherty, software engineer</title>
 		<BaseHead
 			pageTitle={pageTitle}
 			pageDescription={pageDescription}
@@ -32,11 +28,22 @@ const { pageTitle, pageDescription, publishedDate } = Astro.props;
 	</head>
 	<body>
 		<Header />
-		<div class="content">
-			<slot />
-		</div>
+		<slot />
 		<Footer />
 	</body>
 </html>
 
-<style></style>
+<style>
+	html {
+		--color-primary: #2c3e50;
+		--color-secondary: gray;
+		--font-main: 'Source Sans Pro', sans-serif;
+		--font-headings: 'Source Sans Pro', sans-serif;
+		--font-code: 'Source Code Pro', monospace;
+	}
+	body {
+		font-family: var(--font-main);
+		margin: 0;
+		padding: 0;
+	}
+</style>

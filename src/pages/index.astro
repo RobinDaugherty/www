@@ -1,5 +1,4 @@
 ---
-import Layout from '../layouts/Default.astro';
 import PostList from '../components/PostList.astro';
 import { getCollection } from 'astro:content';
 import { sortItemsByDateDesc } from '../utils/data-utils';
@@ -7,6 +6,7 @@ import { sortItemsByDateDesc } from '../utils/data-utils';
 const posts = (
 	await getCollection('post', (post) => !post.data.hideFromIndex)
 ).sort(sortItemsByDateDesc);
+import Layout from '../layouts/MainLayout.astro';
 ---
 
 <Layout>

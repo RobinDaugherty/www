@@ -26,6 +26,9 @@ importers:
       '@fontsource/source-sans-pro':
         specifier: ^5.2.5
         version: 5.2.5
+      '@fontsource/source-serif-pro':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@fontsource/space-mono':
         specifier: ^5.2.5
         version: 5.2.5
@@ -330,6 +333,9 @@ packages:
 
   '@fontsource/source-sans-pro@5.2.5':
     resolution: {integrity: sha512-ypendqc4pYUc+EgF7qqPY9iVYEz1t/Qr03VojKxG/2g3dnpHa1B6DOlDxWQjQXDj5QrG6inEqGT0g+edjALZyg==}
+
+  '@fontsource/source-serif-pro@5.2.5':
+    resolution: {integrity: sha512-MTsjMrl2+81dar37wV1taDYzU+o9ArcuBVBkXRNb6JuNCBmrKOIAAmI1wC3cE+Q0eAlgXlfNrvZ7swP3l2M8tQ==}
 
   '@fontsource/space-mono@5.2.5':
     resolution: {integrity: sha512-yFU6K17ko4LEDHl5554n6mCrmDbuc2xYGCZZkCRpAvRtCaJisUjxFdDdph2d2hiIElaiMlinmkmV8IWlbQCMJA==}
@@ -2865,6 +2871,8 @@ snapshots:
   '@fontsource/source-code-pro@5.2.5': {}
 
   '@fontsource/source-sans-pro@5.2.5': {}
+
+  '@fontsource/source-serif-pro@5.2.5': {}
 
   '@fontsource/space-mono@5.2.5': {}
 

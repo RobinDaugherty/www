@@ -2,6 +2,9 @@
 import '../styles/global.scss';
 import '@fontsource/source-sans-pro/300.css';
 import '@fontsource/source-sans-pro';
+import '@fontsource/source-serif-pro/300-italic.css';
+import '@fontsource/source-serif-pro/400-italic.css';
+import '@fontsource/source-code-pro/400.css';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -26,22 +29,32 @@ const { pageTitle, pageDescription, publishedDate } = Astro.props;
 	</head>
 	<body>
 		<Header />
-		<slot />
+		<main>
+			<slot />
+		</main>
 		<Footer />
 	</body>
 </html>
 
 <style>
 	html {
-		--color-primary: #2c3e50;
-		--color-secondary: gray;
 		--font-main: 'Source Sans Pro', sans-serif;
+		--font-weight-main: 300;
 		--font-headings: 'Source Sans Pro', sans-serif;
+		--font-weight-headings: 400;
+		--font-weight-bold: 400;
+		--font-italic: 'Source Serif Pro', serif;
 		--font-code: 'Source Code Pro', monospace;
+		--font-weight-code: 400;
 	}
 	body {
-		font-family: var(--font-main);
 		margin: 0;
 		padding: 0;
+	}
+
+	main {
+		margin: 0 auto;
+		max-width: 800px;
+		padding: 1rem;
 	}
 </style>

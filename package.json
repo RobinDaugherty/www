@@ -17,6 +17,7 @@
 		"@astrojs/sitemap": "^3.2.1",
 		"@fontsource/source-code-pro": "^5.2.5",
 		"@fontsource/source-sans-pro": "^5.2.5",
+		"@fontsource/source-serif-pro": "^5.2.5",
 		"@fontsource/space-mono": "^5.2.5",
 		"@iconify-json/devicon-plain": "^1.2.16",
 		"@iconify-json/fa6-brands": "^1.2.5",

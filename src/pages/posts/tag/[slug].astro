@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry } from 'astro:content';
-import Layout from '../../../layouts/MainLayout.astro';
+import Layout from '../../../layouts/PostLayout.astro';
 import PostList from '../../../components/PostList.astro';
 import {
 	sortItemsByDateDesc,
@@ -33,7 +33,7 @@ export type Props = {
 const { tag, posts } = Astro.props;
 ---
 
-<Layout pageTitle={`${tag.name}`} `>
+<Layout pageTitle={`${tag.name} posts`} `>
 	<hero>
 		<h1>{tag.name}</h1>
 	</hero>

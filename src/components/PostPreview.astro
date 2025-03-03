@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
 
 type Props = {
 	post: CollectionEntry<'post'>;
@@ -18,22 +19,25 @@ const path = `/posts/${post.slug}`;
 			{title}
 		</div>
 	</a>
+	<div class="published-date">
+		<FormattedDate date={post.data.publishedDate} />
+	</div>
 </article>
 
 <style lang="scss">
 	article {
 		display: block;
+		padding-bottom: 0.5em;
 
 		a {
+			.title {
+				display: block;
+			}
 			.published-date {
 				display: block;
 				text-decoration: none;
 				font-size: 0.75em;
 				color: var(--gray-light);
-			}
-
-			.title {
-				display: block;
 			}
 		}
 	}

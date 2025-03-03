@@ -1,28 +1,32 @@
 ---
-import { Icon } from 'astro-icon/components';
+import Item from './SocialItem.astro';
 ---
 
 <ul>
-	<li data-social="linkedin">
-		<a href="https://linkedin.com/in/robindaugherty">
-			<Icon name="fa6-brands:linkedin" title="LinkedIn" />
-		</a>
-	</li>
-	<li data-social="stackoverflow">
-		<a href="https://stackoverflow.com/users/1589422/robin-daugherty">
-			<Icon name="fa6-brands:stack-overflow" title="StackOverflow" />
-		</a>
-	</li>
-	<li data-social="github">
-		<a href="https://github.com/RobinDaugherty">
-			<Icon name="fa6-brands:square-github" title="GitHub" />
-		</a>
-	</li>
-	<li data-social="rss">
-		<a href="/feed">
-			<Icon name="fa6-solid:rss" title="RSS Feed" />
-		</a>
-	</li>
+	<Item
+		name="LinkedIn"
+		url="https://linkedin.com/in/robindaugherty"
+		iconName="fa6-brands:linkedin-in"
+		brandColor="#0e76a8"
+	/>
+	<Item
+		name="StackOverflow"
+		url="https://stackoverflow.com/users/1589422/robin-daugherty"
+		iconName="fa6-brands:stack-overflow"
+		brandColor="#ef8236"
+	/>
+	<Item
+		name="GitHub"
+		iconName="fa6-brands:github"
+		brandColor="black"
+		url="https://github.com/RobinDaugherty"
+	/>
+	<Item
+		name="RSS Feed"
+		iconName="fa6-solid:rss"
+		brandColor="#e73c3c"
+		url="/feed"
+	/>
 </ul>
 
 <style>
@@ -32,34 +36,5 @@ import { Icon } from 'astro-icon/components';
 		list-style: none;
 		gap: 1rem;
 		padding: 0;
-	}
-
-	li {
-		margin: 0;
-	}
-
-	li a {
-		color: var(--color-primary);
-		background-color: var(--color-secondary);
-		display: inline-block;
-		width: 1.8rem;
-		height: 1.8rem;
-		line-height: 2.1rem;
-		text-align: center;
-		font-size: 14pt;
-		border-radius: 3px;
-	}
-
-	[data-social='github']:hover a {
-		color: black;
-	}
-	[data-social='linkedin']:hover a {
-		color: #0e76a8;
-	}
-	[data-social='stackoverflow']:hover a {
-		color: #ef8236;
-	}
-	[data-social='rss']:hover a {
-		color: #e73c3c;
 	}
 </style>

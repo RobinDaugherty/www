@@ -44,4 +44,4 @@ So after finding out that there's not another connecting flight today, I resigne
 
 How can an airline run on sub-par systems? While IT failures probably occur at all airlines, JetBlue sure seems to enjoy far more of them than any other airline with which I've dealt.
 
-[JetBlue is publicly a Microsoft Windows-only operation.](http://www.baselinemag.com/article2/0,1540,818861,00.asp) They are apparently proud of this fact.
+[JetBlue is publicly a Microsoft Windows-only operation.](https://www.baselinemag.com/erp/How-JetBlue-Makes-Microsoft-Fly/) They are apparently proud of this fact.

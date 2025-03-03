@@ -3,21 +3,27 @@ import ProjectsEntry from './ProjectsEntry.astro';
 ---
 
 <ProjectsEntry
-	name="Harper app"
+	name="Harper"
 	startYear={2018}
 	endYear={2023}
 	url="https://nicolasscott.com/harper"
 >
 	<p>
-		Native iOS app and backend to manage your dog. Scheduling of daily, weekly,
-		and monthly plans, such as training, feeding, grooming, and medications,
-		with support for multiple people in the pack. Real-time chat with a trainer.
-		Feed with shared photos and videos. Public, friend-based, and private
-		activity feeds. Push notifications (reminders and completion notifications)
-		and real-time updates to keep schedule and completion state in sync.
+		Native iOS app and backend to manage your dog. Scheduling of
+		daily/weekly/monthly plans, such as training, feeding, grooming, and
+		medications, with support for multiple people in the pack. Real-time chat
+		with a trainer. Feed with shared photos and videos. Public, friend-based,
+		and private activity feeds. Push notifications (reminders and completion
+		notifications) and real-time updates to keep schedule and completion state
+		in sync.
 	</p>
 </ProjectsEntry>
-<ProjectsEntry name="Better Errors Ruby gem" startYear={2017} endYear={2022}>
+<ProjectsEntry
+	name="Better Errors Ruby gem"
+	startYear={2017}
+	endYear={2022}
+	url="https://github.com/BetterErrors"
+>
 	<p>
 		Better Errors is a fantastic open-source Ruby developer tool that I've used
 		for years. I was able to give a hand to the project, fixing some bugs and
@@ -31,26 +37,34 @@ import ProjectsEntry from './ProjectsEntry.astro';
 		project, following semantic versioning.
 	</p>
 </ProjectsEntry>
-<ProjectsEntry name="Coveralls" startYear={2015} endYear={2016}
+<ProjectsEntry
+	name="Coveralls"
+	startYear={2015}
+	endYear={2016}
+	url="https://coveralls.io"
 	><p>
-		Coveralls is a coverage-reporting tool. I performed Rails upgrades. Migrated
+		Coveralls is a coverage-reporting tool. I upgraded Ruby and Rails, migrated
 		from delayed_job to Sidekiq. Built integration with Bitbucket CI and GitLab
 		CI.
 	</p>
 </ProjectsEntry>
 <ProjectsEntry name="Lead management system" startYear={2010} endYear={2015}
 	><p>
-		Built and supported a web application for a car dealership to manage leads
-		and retrieve credit reports. Designed and built this application using PHP
-		and MySQL.
+		Built and hosted a web application for a car dealership to manage leads and
+		retrieve credit reports. Designed and built this application using PHP and
+		MySQL.
 	</p>
 </ProjectsEntry>
 <ProjectsEntry name="MOTODEV website" startYear={2006} endYear={2008}
 	><p>
 		A full CMS built to host the Motorola Developer website. Using PHP and
 		MySQL, built a full document database. This provided the infrastructure for
-		various features, for example allowing comparison of features and developer
+		various features: for example allowing comparison of features and developer
 		attributes of all Motorola products.
+	</p>
+	<p>
+		This was hosted at <tt>motodev.motorola.com</tt> and was shut down sometime after
+		Motorola Mobility was acquired by Google.
 	</p>
 </ProjectsEntry>
 <ProjectsEntry
@@ -64,10 +78,19 @@ import ProjectsEntry from './ProjectsEntry.astro';
 		was used by Apple to plan WWDC 2006.
 	</p>
 </ProjectsEntry>
-<ProjectsEntry name="WinebankWine.com" startYear={2005} endYear={2005}
+<ProjectsEntry
+	name="WinebankWine.com"
+	startYear={2005}
+	endYear={2005}
+	url="https://web.archive.org/web/20181213232438/http://www.winebankwine.com:80/forsale/"
 	><p>
 		Retail website for wine consignment store, including payment processing and
 		Fedex shipping integration.
+	</p>
+	<p>
+		The shipping integration was interesting, because it needed to allocate
+		space in different shipping container types depending on the size and count
+		of bottles in the shopping cart.
 	</p>
 </ProjectsEntry>
 <ProjectsEntry

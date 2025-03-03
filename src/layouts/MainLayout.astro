@@ -1,5 +1,7 @@
 ---
 import '../styles/global.scss';
+import '@fontsource/space-mono/400.css';
+import spaceMono from '@fontsource/space-mono/files/space-mono-latin-400-normal.woff2?url';
 import '@fontsource/source-sans-pro/300.css';
 import '@fontsource/source-sans-pro';
 import '@fontsource/source-serif-pro/300-italic.css';
@@ -21,6 +23,13 @@ const { pageTitle, pageDescription, publishedDate } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
+		<link
+			rel="preload"
+			href={spaceMono}
+			as="font"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
 		<BaseHead
 			pageTitle={pageTitle}
 			pageDescription={pageDescription}
@@ -38,6 +47,8 @@ const { pageTitle, pageDescription, publishedDate } = Astro.props;
 
 <style>
 	html {
+		--font-headline: 'Space Mono', monospace;
+		--font-weight-headline: 400;
 		--font-main: 'Source Sans Pro', sans-serif;
 		--font-weight-main: 300;
 		--font-headings: 'Source Sans Pro', sans-serif;

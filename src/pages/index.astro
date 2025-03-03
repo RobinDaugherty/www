@@ -10,44 +10,76 @@ import IndexPosts from '../components/index/Posts.astro';
 ---
 
 <Layout pageTitle={undefined}>
-	<h1>Robin Daugherty</h1>
-	<section class="tagline">
-		<p>
-			Utrecht, Netherlands ·
-			<a href="mailto:robin@robindaugherty.net">robin@robindaugherty.net</a>
-		</p>
+	<section class="top">
+		<container>
+			<div>
+				<h1>Robin Daugherty</h1>
+				<div class="tagline">
+					Utrecht, Netherlands ·
+					<a href="mailto:robin@robindaugherty.net">robin@robindaugherty.net</a>
+				</div>
+			</div>
+
+			<div>
+				<AboutSection />
+			</div>
+
+			<div>
+				<SocialSection />
+			</div>
+		</container>
 	</section>
 
-	<h2>Me</h2>
-	<section class="me"><AboutSection /></section>
-
-	<h2>Social</h2>
-	<section class="social">
-		<SocialSection />
-	</section>
-
-	<h2>Skills</h2>
 	<section class="skills">
-		<SkillsSection />
+		<container>
+			<h2>Skills</h2>
+			<SkillsSection />
+		</container>
 	</section>
 
-	<h2>Experience</h2>
 	<section class="experience">
-		<ExperienceSection />
+		<container>
+			<h2>Experience</h2>
+			<ExperienceSection />
+		</container>
 	</section>
 
-	<h2>Projects</h2>
 	<section class="projects">
-		<ProjectsSection />
+		<container>
+			<h2>Projects</h2>
+			<ProjectsSection />
+		</container>
 	</section>
 
-	<h2>Posts</h2>
 	<section class="posts">
-		<IndexPosts />
+		<container>
+			<h2>Posts</h2>
+			<IndexPosts />
+		</container>
 	</section>
 </Layout>
 
 <style>
+	section {
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+
+		> container {
+			width: 100%;
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+	}
+
+	h2 {
+		font-size: 1.1rem;
+		text-transform: uppercase;
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
+	}
+
 	h1 {
 		font-family: 'Space Mono', monospace;
 		font-weight: 400;
@@ -55,12 +87,32 @@ import IndexPosts from '../components/index/Posts.astro';
 		line-height: 3rem;
 		margin: 0;
 	}
-	h2 {
+
+	section + section {
+		border-top: 1px solid var(--color-secondary);
 	}
 
-	section.tagline {
+	section.top {
+		> container {
+			display: flex;
+			flex-direction: column;
+			gap: 3rem;
+		}
+
+		.tagline {
+			padding-top: 1em;
+		}
+
+		h2 {
+			margin-top: 2rem;
+		}
+
 		a[href^='mailto:'] {
 			text-decoration: none;
 		}
+	}
+
+	:global(section) :global(container) h2 {
+		margin-top: 0;
 	}
 </style>

@@ -1,0 +1,237 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<h3>Languages</h3>
+<ul>
+	<li data-skill="ruby">
+		<Icon name="devicon-plain:ruby" />
+		Ruby
+	</li>
+	<li data-skill="swift">
+		<Icon name="devicon-plain:swift" />
+		Swift
+	</li>
+	<li data-skill="typescript">
+		<Icon name="devicon-plain:typescript" />
+		Typescript
+	</li>
+	<li data-skill="cplusplus">
+		<Icon name="devicon-plain:cplusplus" />
+		C++
+	</li>
+	<li data-skill="postgresql">
+		<Icon name="devicon-plain:postgresql" />
+		SQL
+	</li>
+	<li data-skill="php">
+		<Icon name="devicon-plain:php" />
+		PHP
+	</li>
+	<li data-skill="java">
+		<Icon name="devicon-plain:java" />
+		Java
+	</li>
+</ul>
+
+<h3>Frameworks</h3>
+<ul>
+	<li data-skill="rails">
+		<Icon name="devicon-plain:rails" />
+		Rails
+	</li>
+	<li data-skill="react">
+		<Icon name="fa6-brands:react" />
+		React
+	</li>
+	<li data-skill="swift">
+		<Icon name="devicon-plain:swift" />
+		SwiftUI
+	</li>
+	<li data-skill="swift">
+		<Icon name="devicon-plain:swift" />
+		UIKit
+	</li>
+</ul>
+
+<h3>Architectures</h3>
+<ul>
+	<li data-skill="microservices">
+		<Icon name="mdi:cube-outline" />
+		Microservices
+	</li>
+	<li data-skill="containers">
+		<Icon name="containers" />
+		Containers
+	</li>
+	<li data-skill="rest">
+		<Icon name="mdi:api" />
+		RESTful APIs
+	</li>
+	<li data-skill="saas">
+		<Icon name="mdi:cloud" />
+		SaaS
+	</li>
+	<li data-skill="eventlog">
+		<Icon name="mdi:timeline-text" />
+		Event Log
+	</li>
+</ul>
+
+<h3>Workflows</h3>
+<ul>
+	<li data-skill="agile">
+		<Icon name="agile" />
+		Agile
+	</li>
+	<li data-skill="scrum">
+		<Icon name="mdi:account-group" />
+		Scrum
+	</li>
+	<li data-skill="kanban">
+		<Icon name="kanban" />
+		Kanban
+	</li>
+	<li data-skill="lean">
+		<Icon name="fa6-solid:crop-simple" />
+		Lean
+	</li>
+</ul>
+
+<h3>Databases</h3>
+<ul>
+	<li data-skill="postgresql">
+		<Icon name="devicon-plain:postgresql" />
+		Postgres
+	</li>
+	<li data-skill="firebase">
+		<Icon name="devicon-plain:firebase" />
+		Firebase
+	</li>
+	<li data-skill="sqlite">
+		<Icon name="sqlite" />
+		SQLite
+	</li>
+</ul>
+
+<h3>Cloud Platforms</h3>
+<ul>
+	<li data-skill="aws">
+		<Icon name="mdi:cube-outline" />
+		AWS
+	</li>
+	<li data-skill="gcp">
+		<Icon name="devicon-plain:googlecloud" />
+		Google Cloud
+	</li>
+	<li data-skill="digitalocean">
+		<Icon name="devicon-plain:digitalocean" />
+		Digital Ocean
+	</li>
+	<li data-skill="linode">
+		<Icon name="linode" />
+		Linode
+	</li>
+</ul>
+
+<h3>Source Control</h3>
+<ul>
+	<li data-skill="git">
+		<Icon name="devicon-plain:git" />
+		Git
+	</li>
+	<li data-skill="github">
+		<Icon name="fa6-brands:github" />
+		GitHub
+	</li>
+	<li data-skill="gitlab">
+		<Icon name="devicon-plain:gitlab" />
+		GitLab
+	</li>
+	<li data-skill="bitbucket">
+		<Icon name="fa6-brands:bitbucket" />
+		Bitbucket
+	</li>
+	<li data-skill="git">
+		<Icon name="devicon-plain:git" />
+		Forgejo
+	</li>
+	<li data-skill="subversion">
+		<Icon name="subversion" />
+		Subversion
+	</li>
+</ul>
+
+<h3>Continuous Integration</h3>
+<ul>
+	<li data-skill="github">
+		<Icon name="fa6-brands:github" />
+		Github Actions
+	</li>
+	<li data-skill="circleci">
+		<Icon name="devicon-plain:circleci" />
+		CircleCI
+	</li>
+	<li data-skill="travis">
+		<Icon name="travis" />
+		TravisCI
+	</li>
+	<li data-skill="bitrise">
+		<Icon name="bitrise" />
+		Bitrise
+	</li>
+	<li data-skill="xcode">
+		<Icon name="xcode" />
+		Xcode Cloud
+	</li>
+	<li data-skill="fastlane">
+		<Icon name="fastlane" />
+		Fastlane
+	</li>
+</ul>
+
+<h3>Operating Systems</h3>
+<ul>
+	<li data-skill="apple">
+		<Icon name="fa6-brands:apple" />
+		Mac
+	</li>
+	<li data-skill="linux">
+		<Icon name="devicon-plain:linux" />
+		Linux
+	</li>
+	<li data-skill="windows">
+		<Icon name="fa6-brands:windows" />
+		Windows
+	</li>
+	<li data-skill="os2">
+		<Icon name="os2" />
+		OS/2
+	</li>
+</ul>
+
+<style>
+	ul {
+		display: flex;
+		justify-content: start;
+		list-style: none;
+		gap: 1em;
+		padding: 0;
+	}
+
+	li {
+		margin: 0;
+
+		svg {
+			vertical-align: -0.125em;
+		}
+
+		&[data-skill='sqlite'] svg {
+			/* The feather is just a bit too detailed to see at normal size,
+			 * and their design has it taller and ascending over the text.
+			 */
+			width: 1.2em;
+			height: 1.2em;
+		}
+	}
+</style>

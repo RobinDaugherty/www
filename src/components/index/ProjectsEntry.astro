@@ -10,17 +10,28 @@ const { name, url, startYear, endYear } = Astro.props;
 ---
 
 <entry>
-	<h4>
-		{url ? <a href={url}>{name}</a> : name}
-	</h4>
-	<div>
+	<div class="timeframe">
 		{startYear}{endYear === undefined && '–Present'}{
 			endYear && endYear > startYear && <span>–{endYear}</span>
 		}
 	</div>
+	<h3>
+		{url ? <a href={url}>{name}</a> : name}
+	</h3>
 	<div class="description">
 		<slot />
 	</div>
 </entry>
 
-<style></style>
+<style>
+	h3 {
+		margin: 0;
+	}
+	.timeframe {
+		color: var(--color-secondary);
+		float: right;
+	}
+	p {
+		margin-bottom: 0;
+	}
+</style>

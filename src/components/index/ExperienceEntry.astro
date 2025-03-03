@@ -2,24 +2,38 @@
 type Props = {
 	title: string;
 	company: string;
+	companyUrl?: string | undefined;
 	startYear: number;
 	endYear?: number | undefined;
 };
 
-const { title, company, startYear, endYear } = Astro.props;
+const { title, company, companyUrl, startYear, endYear } = Astro.props;
 ---
 
 <entry>
-	<h4>{title}</h4>
-	<div>{company}</div>
-	<div>
+	<div class="timeframe">
 		{startYear}{endYear === undefined && '–Present'}{
 			endYear && endYear > startYear && <span>–{endYear}</span>
 		}
+	</div>
+	<h3>{title}</h3>
+	<div class="company">
+		{companyUrl ? <a href={companyUrl}>{company}</a> : company}
 	</div>
 	<div class="description">
 		<slot />
 	</div>
 </entry>
 
-<style></style>
+<style>
+	h3 {
+		margin: 0;
+	}
+	.timeframe {
+		color: var(--color-secondary);
+		float: right;
+	}
+	p {
+		margin-bottom: 0;
+	}
+</style>

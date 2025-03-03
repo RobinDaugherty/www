@@ -1,0 +1,26 @@
+---
+type Props = {
+	name: string;
+	url?: string | undefined;
+	startYear: number;
+	endYear?: number | undefined;
+};
+
+const { name, url, startYear, endYear } = Astro.props;
+---
+
+<entry>
+	<h4>
+		{url ? <a href={url}>{name}</a> : name}
+	</h4>
+	<div>
+		{startYear}{endYear === undefined && '–Present'}{
+			endYear && endYear > startYear && <span>–{endYear}</span>
+		}
+	</div>
+	<div class="description">
+		<slot />
+	</div>
+</entry>
+
+<style></style>

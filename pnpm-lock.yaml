@@ -26,6 +26,9 @@ importers:
       '@fontsource/source-sans-pro':
         specifier: ^5.2.5
         version: 5.2.5
+      '@fontsource/space-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@iconify-json/devicon-plain':
         specifier: ^1.2.16
         version: 1.2.16
@@ -327,6 +330,9 @@ packages:
 
   '@fontsource/source-sans-pro@5.2.5':
     resolution: {integrity: sha512-ypendqc4pYUc+EgF7qqPY9iVYEz1t/Qr03VojKxG/2g3dnpHa1B6DOlDxWQjQXDj5QrG6inEqGT0g+edjALZyg==}
+
+  '@fontsource/space-mono@5.2.5':
+    resolution: {integrity: sha512-yFU6K17ko4LEDHl5554n6mCrmDbuc2xYGCZZkCRpAvRtCaJisUjxFdDdph2d2hiIElaiMlinmkmV8IWlbQCMJA==}
 
   '@iconify-json/devicon-plain@1.2.16':
     resolution: {integrity: sha512-6TUOL6ieBcciCP3xLWj1a0sYCW+hfpLpq0uo7aP0/hKANxc9CINOvapBoNSCL6WMHOK9F8J3jkPMmZElDozIdg==}
@@ -2859,6 +2865,8 @@ snapshots:
   '@fontsource/source-code-pro@5.2.5': {}
 
   '@fontsource/source-sans-pro@5.2.5': {}
+
+  '@fontsource/space-mono@5.2.5': {}
 
   '@iconify-json/devicon-plain@1.2.16':
     dependencies:

@@ -60,6 +60,7 @@ import IndexPosts from '../components/index/Posts.astro';
 
 <style>
 	section {
+		--section-margin: 3rem;
 		min-height: 80vh;
 		display: flex;
 		align-items: center;
@@ -67,8 +68,8 @@ import IndexPosts from '../components/index/Posts.astro';
 
 		> container {
 			width: 100%;
-			padding-top: 3rem;
-			padding-bottom: 3rem;
+			padding-top: var(--section-margin);
+			padding-bottom: var(--section-margin);
 		}
 	}
 
@@ -77,6 +78,7 @@ import IndexPosts from '../components/index/Posts.astro';
 		text-transform: uppercase;
 		text-decoration: underline;
 		text-underline-offset: 0.15em;
+		margin-bottom: var(--section-margin);
 	}
 
 	h1 {

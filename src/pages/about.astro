@@ -1,0 +1,46 @@
+---
+import ExternalLink from '../components/ExternalLink.astro';
+import Layout from '../layouts/MainLayout.astro';
+---
+
+<Layout pageTitle="My Story">
+	<p>
+		When I was 10 years old, I was given an old, broken, computer, <ExternalLink
+			href="http://www.thepcmuseum.net/details.php?RECORD_KEY%28museum%29=id&id(museum)=753"
+			>some sort of Xerox terminal</ExternalLink
+		> that ran <ExternalLink href="https://en.wikipedia.org/wiki/CP/M"
+			>CP/M</ExternalLink
+		>. I took it apart and put it back together, and when I was done it was
+		working again.
+	</p>
+	<p>Thus began my career in "computers".</p>
+	<p>
+		I learned <ExternalLink href="http://en.wikipedia.org/wiki/Turbo_Basic"
+			>Borland Turbo Basic</ExternalLink
+		> and began writing simple DOS applications that required the user to enter their
+		password. This led me to write a library to do windowing and UI controls in text
+		mode for DOS. The library included text inputs, checkboxes, radio buttons, pulldowns,
+		menus, and buttons.
+	</p>
+	<p>
+		Turbo Basic had the ability to include blocks of assembly, so I got a copy
+		of <ExternalLink href="https://archive.org/details/peternortonsasse00nort"
+			>Peter Norton's Assembly Language Book</ExternalLink
+		>. My library functions used BIOS calls for keyboard input and screen
+		output, which sped things up considerably. I rewrote this library a number
+		of times, usually because I made a mistake, lost my backup and had to start
+		over.
+	</p>
+	<p>
+		I stumbled across a Microsoft Press book on QuickC (I think it was called
+		"Learn QuickC") and ended up rewriting my library using Microsoft QuickC.
+		One notable application that I completed in C was a low-level floppy disk
+		editor.
+	</p>
+	<p>
+		In 1996 I started playing with Linux. I used <ExternalLink
+			href="http://www.linuxfromscratch.org">Linux From Scratch</ExternalLink
+		> to learn everything I could about how the operating system works. I migrated
+		from pure C on DOS, to C++ on Windows and Linux, to PHP, to Ruby.
+	</p>
+</Layout>

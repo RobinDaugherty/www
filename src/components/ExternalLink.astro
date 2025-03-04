@@ -1,0 +1,28 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { Icon } from 'astro-icon/components';
+
+type Props = HTMLAttributes<'a'>;
+
+const props = Astro.props;
+---
+
+<a {...props} target="_blank"
+	><span class="link-text">
+		<slot />
+	</span>
+	<Icon
+		class="external-link"
+		name="fa6-solid:arrow-up-right-from-square"
+		size="0.7em"
+		title="External link"
+	/></a
+>
+
+<style>
+	a {
+		text-decoration: none;
+		/* the .link-text also gets the same style as the <a> tag, so we can remove it from the <a> itself */
+		margin-right: 0.1em;
+	}
+</style>

@@ -1,4 +1,6 @@
 ---
+import ExternalLink from '../ExternalLink.astro';
+
 type Props = {
 	title: string;
 	company: string;
@@ -18,7 +20,13 @@ const { title, company, companyUrl, startYear, endYear } = Astro.props;
 	</div>
 	<h3>{title}</h3>
 	<div class="company">
-		{companyUrl ? <a href={companyUrl}>{company}</a> : company}
+		{
+			companyUrl ? (
+				<ExternalLink href={companyUrl}>{company}</ExternalLink>
+			) : (
+				company
+			)
+		}
 	</div>
 	<div class="description">
 		<slot />

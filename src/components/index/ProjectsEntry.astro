@@ -1,12 +1,11 @@
 ---
 type Props = {
 	name: string;
-	url?: string | undefined;
 	startYear: number;
 	endYear?: number | undefined;
 };
 
-const { name, url, startYear, endYear } = Astro.props;
+const { name, startYear, endYear } = Astro.props;
 ---
 
 <entry>
@@ -15,9 +14,7 @@ const { name, url, startYear, endYear } = Astro.props;
 			endYear && endYear > startYear && <span>–{endYear}</span>
 		}
 	</div>
-	<h3>
-		{url ? <a href={url}>{name}</a> : name}
-	</h3>
+	<h3>{name}</h3>
 	<div class="description">
 		<slot />
 	</div>

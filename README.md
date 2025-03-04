@@ -16,10 +16,6 @@ Prettier is used to format the code, and Husky is used to ensure only pretty cod
 pnpm dev
 ```
 
-Your site is now running at `http://localhost:8006`!
-
-Better yet, `echo 8006 > ~/.puma-dev/www.robindaugherty` so that puma-dev will serve it up at www.robindaugherty.localdev
-
 If you want to emulate static deployment, use the following:
 
 ```sh

@@ -4,8 +4,9 @@ Robin's personal website.
 
 ## Developing
 
-This project uses Typescript and [Astro](https://docs.astro.build), which defines the project structure
-and the `.astro` file format for components.
+This project uses Typescript and [Astro](https://docs.astro.build), which defines the project structure.
+
+Most of the content is made up of [Astro Components](https://docs.astro.build/en/basics/astro-components) which can contain JS, HTML and CSS.
 
 Prettier is used to format the code, and Husky is used to ensure only pretty code is committed.
 

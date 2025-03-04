@@ -1,0 +1,40 @@
+---
+import Item from './SocialItem.astro';
+---
+
+<ul>
+	<Item
+		name="LinkedIn"
+		url="https://linkedin.com/in/robindaugherty"
+		iconName="fa6-brands:linkedin-in"
+		brandColor="#0e76a8"
+	/>
+	<Item
+		name="StackOverflow"
+		url="https://stackoverflow.com/users/1589422/robin-daugherty"
+		iconName="fa6-brands:stack-overflow"
+		brandColor="#ef8236"
+	/>
+	<Item
+		name="GitHub"
+		iconName="fa6-brands:github"
+		brandColor="black"
+		url="https://github.com/RobinDaugherty"
+	/>
+	<Item
+		name="RSS Feed"
+		iconName="fa6-solid:rss"
+		brandColor="#e73c3c"
+		url="/feed"
+	/>
+</ul>
+
+<style>
+	ul {
+		display: flex;
+		justify-content: start;
+		list-style: none;
+		gap: 1rem;
+		padding: 0;
+	}
+</style>

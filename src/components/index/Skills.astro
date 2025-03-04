@@ -1,0 +1,131 @@
+---
+import Category from './SkillsCategory.astro';
+import Item from './SkillsItem.astro';
+---
+
+<Category name="Languages">
+	<Item id="ruby" name="Ruby" iconName="devicon-plain:ruby" />
+	<Item id="swift" name="Swift" iconName="devicon-plain:swift" />
+	<Item id="typescript" name="Typescript" iconName="devicon-plain:typescript" />
+	<Item id="javascript" name="JavaScript" iconName="devicon-plain:javascript" />
+	<Item id="python" name="Python" iconName="devicon-plain:python" />
+	<Item id="mermaidjs" name="Mermaid" iconName="mermaid" />
+	<Item
+		id="cplusplus"
+		name="C++"
+		iconName="devicon-plain:cplusplus"
+		is:lowerEmphasis
+	/>
+	<Item id="java" name="Java" iconName="devicon-plain:java" is:lowerEmphasis />
+	<Item id="php" name="PHP" iconName="devicon-plain:php" is:lowerEmphasis />
+</Category>
+
+<Category name="Frameworks">
+	<Item id="rails" name="Rails" iconName="devicon-plain:rails" />
+	<Item id="swiftui" name="SwiftUI" iconName="devicon-plain:swift" />
+	<Item id="uikit" name="UIKit" iconName="devicon-plain:swift" />
+	<Item id="react" name="React" iconName="fa6-brands:react" />
+	<Item id="astro" name="Astro" iconName="devicon-plain:astro" />
+	<Item id="nextjs" name="Next" iconName="devicon-plain:nextjs" />
+	<Item id="gatsby" name="Gatsby" iconName="devicon-plain:gatsby" />
+	<Item id="django" name="Django" iconName="devicon-plain:django" />
+</Category>
+
+<Category name="Architectures">
+	<Item id="containers" name="Containers" iconName="containers" />
+	<Item id="graphql" name="GraphQL" iconName="devicon-plain:graphql" />
+	<Item id="rest" name="RESTful APIs" iconName="mdi:api" />
+	<Item id="microservices" name="Microservices" iconName="mdi:cube-outline" />
+	<Item id="eventlog" name="Event Log" iconName="mdi:timeline-text" />
+</Category>
+
+<Category name="Tools">
+	<Item id="notion" name="Notion" iconName="devicon-plain:notion" />
+	<Item id="figma" name="Figma" iconName="devicon-plain:figma" />
+	<Item id="sentry" name="Sentry" iconName="sentry" />
+	<Item id="appsignal" name="AppSignal" iconName="appsignal" />
+	<Item
+		id="pairprogramming"
+		name="Pair Programming"
+		iconName="mdi:account-multiple"
+	/>
+	<Item id="slack" name="Slack" iconName="fa6-brands:slack" />
+</Category>
+
+<Category name="Testing">
+	<Item id="rspec" name="RSpec" iconName="devicon-plain:rspec" />
+	<Item id="mocha" name="Mocha" iconName="devicon-plain:mocha" />
+	<Item id="jest" name="Jest" iconName="devicon-plain:jest" />
+	<Item id="vitest" name="vitest" iconName="devicon-plain:vitest" />
+	<Item id="codecov" name="Codecov" iconName="devicon-plain:codecov" />
+</Category>
+
+<Category name="Workflows">
+	<Item id="agile" name="Agile" iconName="agile" />
+	<Item id="scrum" name="Scrum" iconName="mdi:account-group" />
+	<Item id="kanban" name="Kanban" iconName="kanban" />
+	<Item id="lean" name="Lean" iconName="fa6-solid:crop-simple" />
+</Category>
+
+<Category name="Databases">
+	<Item id="postgresql" name="PostgreSQL" iconName="devicon-plain:postgresql" />
+	<Item id="firebase" name="Firebase" iconName="devicon-plain:firebase" />
+	<Item id="sqlite" name="SQLite" iconName="sqlite" />
+	<Item id="neo4j" name="Neo4J" iconName="devicon-plain:neo4j" />
+	<Item
+		id="mysql"
+		name="MySQL"
+		iconName="devicon-plain:mysql"
+		is:lowerEmphasis
+	/>
+</Category>
+
+<Category name="Cloud Platforms">
+	<Item
+		id="digitalocean"
+		name="Digital Ocean"
+		iconName="devicon-plain:digitalocean"
+	/>
+	<Item id="cloudflare" name="Cloudflare" iconName="devicon-plain:cloudflare" />
+	<Item id="aws" name="AWS" iconName="mdi:cube-outline" />
+	<Item id="gcp" name="Google Cloud" iconName="devicon-plain:googlecloud" />
+	<Item id="azure" name="Azure" iconName="devicon-plain:azure" />
+	<Item id="fastly" name="Fastly" iconName="fastly" />
+	<Item id="linode" name="Linode" iconName="linode" />
+</Category>
+
+<Category name="Orchestration">
+	<Item id="ansible" name="Ansible" iconName="devicon-plain:ansible" />
+	<Item id="terraform" name="Terraform" iconName="devicon-plain:terraform" />
+	<Item id="chef" name="Chef" iconName="chef" is:lowerEmphasis />
+</Category>
+
+<Category name="Source Control">
+	<Item id="git" name="Git" iconName="devicon-plain:git" />
+	<Item id="github" name="GitHub" iconName="fa6-brands:github" />
+	<Item id="gitlab" name="GitLab" iconName="devicon-plain:gitlab" />
+	<Item id="forgejo" name="Forgejo" iconName="devicon-plain:forgejo" />
+	<Item id="bitbucket" name="Bitbucket" iconName="fa6-brands:bitbucket" />
+	<Item
+		id="subversion"
+		name="Subversion"
+		iconName="subversion"
+		is:lowerEmphasis
+	/>
+</Category>
+
+<Category name="Continuous Integration">
+	<Item id="github" name="Github Actions" iconName="fa6-brands:github" />
+	<Item id="circleci" name="CircleCI" iconName="devicon-plain:circleci" />
+	<Item id="travis" name="TravisCI" iconName="travis" />
+	<Item id="bitrise" name="Bitrise" iconName="bitrise" />
+	<Item id="xcode" name="Xcode Cloud" iconName="xcode" />
+	<Item id="fastlane" name="Fastlane" iconName="fastlane" />
+</Category>
+
+<Category name="Operating Systems">
+	<Item id="apple" name="Mac" iconName="fa6-brands:apple" />
+	<Item id="linux" name="Linux" iconName="devicon-plain:linux" />
+	<Item id="windows" name="Windows" iconName="fa6-brands:windows" />
+	<Item id="os2" name="OS/2" iconName="os2" is:lowerEmphasis />
+</Category>

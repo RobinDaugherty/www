@@ -1,6 +1,8 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import Layout from '../../layouts/PostLayout.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { Picture } from 'astro:assets';
 
 export const prerender = true;
 
@@ -20,6 +22,68 @@ export type Props = {
 };
 
 const { post } = Astro.props;
+const { title, description, heroImage, publishedDate, updatedDate } = post.data;
+const { Content } = await post.render();
 ---
 
-<Layout post={post} />
+<Layout
+	pageTitle={title}
+	pageDescription={description}
+	publishedDate={publishedDate}
+>
+	<article>
+		<div class="article-header">
+			{
+				heroImage && (
+					<hero>
+						<Picture src={heroImage} alt="" />
+					</hero>
+				)
+			}
+			<h1>{title}</h1>
+			<div class="pub-date">
+				<FormattedDate date={publishedDate} />
+				{
+					updatedDate && (
+						<>
+							{' '}
+							<span>
+								(Updated on <FormattedDate date={updatedDate} />)
+							</span>
+						</>
+					)
+				}
+			</div>
+		</div>
+		<Content />
+		<p><a href="/">Back to root</a></p>
+	</article>
+</Layout>
+<style is:global>
+	h1 {
+		font-size: 2em;
+	}
+
+	.pub-date {
+		font-family: var(--font-headings);
+		font-size: 80%;
+		color: var(--color-secondary);
+	}
+
+	pre {
+		font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+	}
+
+	table {
+		border-collapse: collapse;
+		th,
+		td {
+			padding: 0.2em;
+			border: 1pt solid var(--color-secondary);
+		}
+		th {
+			text-align: left;
+			background-color: #eee;
+		}
+	}
+</style>

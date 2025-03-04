@@ -1,0 +1,47 @@
+---
+import ExternalLink from '../ExternalLink.astro';
+
+type Props = {
+	title: string;
+	company: string;
+	companyUrl?: string | undefined;
+	startYear: number;
+	endYear?: number | undefined;
+};
+
+const { title, company, companyUrl, startYear, endYear } = Astro.props;
+---
+
+<entry>
+	<div class="timeframe">
+		{startYear}{endYear === undefined && '–Present'}{
+			endYear && endYear > startYear && <span>–{endYear}</span>
+		}
+	</div>
+	<h3>{title}</h3>
+	<div class="company">
+		{
+			companyUrl ? (
+				<ExternalLink href={companyUrl}>{company}</ExternalLink>
+			) : (
+				company
+			)
+		}
+	</div>
+	<div class="description">
+		<slot />
+	</div>
+</entry>
+
+<style>
+	h3 {
+		margin: 0;
+	}
+	.timeframe {
+		color: var(--color-secondary);
+		float: right;
+	}
+	p {
+		margin-bottom: 0;
+	}
+</style>

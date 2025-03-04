@@ -1,0 +1,46 @@
+---
+import { Icon } from 'astro-icon/components';
+
+type Props = {
+	name: string;
+	url: string;
+	iconName: string;
+	brandColor: string;
+};
+
+const { name, url, iconName, brandColor } = Astro.props;
+---
+
+<li data-social="linkedin">
+	<a href={url}>
+		<Icon name={iconName} title={name} />
+	</a>
+</li>
+
+<style define:vars={{ 'brand-color': brandColor }}>
+	li {
+		margin: 0;
+
+		a {
+			color: white;
+			background-color: var(--color-primary);
+			display: inline-block;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			svg {
+				width: 60%;
+				height: 60%;
+				align-content: center;
+			}
+		}
+
+		&:hover a {
+			background-color: var(--brand-color);
+		}
+	}
+</style>

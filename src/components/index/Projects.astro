@@ -1,0 +1,140 @@
+---
+import ExternalLink from '../ExternalLink.astro';
+import ProjectsEntry from './ProjectsEntry.astro';
+---
+
+<projects>
+	<ProjectsEntry name="Harper" startYear={2018} endYear={2023}>
+		<p>
+			<ExternalLink href="https://harper.dog">Harper</ExternalLink> is an iOS app
+			to manage your dog.
+		</p>
+		<p>I built this native iOS app and the backend.</p>
+		<p>
+			Scheduling of daily/weekly/monthly plans, such as training, feeding,
+			grooming, and medications, with support for multiple people in the pack.
+			Real-time chat with a trainer. Feed with shared photos and videos. Public,
+			friend-based, and private activity feeds. Push notifications (reminders
+			and completion notifications) and real-time updates to keep schedule and
+			completion state in sync.
+		</p>
+	</ProjectsEntry>
+	<ProjectsEntry name="Better Errors Ruby gem" startYear={2017} endYear={2022}>
+		<p>
+			<ExternalLink href="https://github.com/BetterErrors"
+				>Better Errors</ExternalLink
+			> is a fantastic open-source Ruby developer tool that I've used for years.
+			I was able to give a hand to the project, fixing some bugs and reviewing others'
+			contributions. I’m still a maintainer, but have not recently been active.
+		</p>
+	</ProjectsEntry>
+	<ProjectsEntry name="Release Drafter" startYear={2017} endYear={2021}
+		><p>
+			A web app and integrated Github App. Builds release notes from activity in
+			a project, following semantic versioning.
+		</p>
+	</ProjectsEntry>
+	<ProjectsEntry name="Coveralls" startYear={2015} endYear={2016}
+		><p>
+			<ExternalLink href="https://coveralls.io">Coveralls</ExternalLink> is a coverage-reporting
+			tool. I upgraded Ruby and Rails, migrated from delayed_job to Sidekiq. Built
+			integration with Bitbucket CI and GitLab CI.
+		</p>
+	</ProjectsEntry>
+	<ProjectsEntry name="Lead management system" startYear={2010} endYear={2015}
+		><p>
+			Built and hosted a web application for a car dealership to manage leads
+			and retrieve credit reports. Designed and built this application using PHP
+			and MySQL.
+		</p>
+	</ProjectsEntry>
+	<ProjectsEntry
+		name="Motorola Developer website"
+		startYear={2006}
+		endYear={2011}
+	>
+		<p>
+			Built a full-featured CMS to host the Motorola Developer website. This was
+			built as a document database using PHP and MySQL. This provided the
+			infrastructure for various features: for example allowing comparison of
+			features and developer attributes of all Motorola products.
+		</p>
+		<p>
+			In addition to building the software, I and my team built and maintained
+			the server infrastructure to host the website in a colocation facility.
+			This was originally done to build and launch the site in a short timeframe
+			(Motorola IT was notoriously slow) but was maintained until I left the
+			company.
+		</p>
+		<p>
+			The site was hosted at <tt>developer.motorola.com</tt>. It was shut down
+			sometime after Motorola Mobility was acquired by Google. But it's
+			available at the <ExternalLink
+				href="http://web.archive.org/web/20110203104229/http://developer.motorola.com/"
+				>Internet Archive</ExternalLink
+			>.
+		</p>
+	</ProjectsEntry>
+	<ProjectsEntry
+		name="Apple WWDC event planning application"
+		startYear={2006}
+		endYear={2006}
+		><p>
+			Event management application I built for Apple’s WWDR group to schedule
+			and plan resources, staffing, and content for WWDC. Integrated with many
+			internal Apple systems for authentication, documentation, and ticketing.
+			It was used by Apple to plan WWDC 2006.
+		</p>
+	</ProjectsEntry>
+	<ProjectsEntry name="WinebankWine.com" startYear={2005} endYear={2005}
+		><p>
+			Retail website for wine consignment store, including payment processing
+			and Fedex shipping integration.
+		</p>
+		<p>
+			The shipping integration was interesting, because it needed to allocate
+			space in different shipping container types depending on the size and
+			count of bottles in the shopping cart.
+		</p>
+		<p>
+			My work was used until it was replaced around 2019. The original is still
+			available at the <ExternalLink
+				href="https://web.archive.org/web/20181213232438/http://www.winebankwine.com:80/forsale/"
+				>Internal Archive</ExternalLink
+			>.
+		</p>
+	</ProjectsEntry>
+	<ProjectsEntry
+		name="Remote office automated attendant"
+		startYear={2003}
+		endYear={2003}
+		><p>
+			An urgent project to support a remote office that was moving and could not
+			be connected to the company WAN in time. We needed a way to handle
+			incoming phone calls and forward most of them to the main office without
+			requiring customers to dial a different number. Within three weeks, found
+			a solution, designed the architecture, learned how to program the
+			specialized digital telephony devices, and installed the system at the new
+			remote office.
+		</p>
+	</ProjectsEntry>
+	<ProjectsEntry
+		name="Call center management tooling"
+		startYear={1999}
+		endYear={2005}
+		><p>
+			Internal web-based applications to provide call center reporting in real
+			time. A Windows application to provide agent with incoming call
+			information. This required integration with proprietary PBX call center
+			functionality.
+		</p>
+	</ProjectsEntry>
+</projects>
+
+<style>
+	projects {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+</style>

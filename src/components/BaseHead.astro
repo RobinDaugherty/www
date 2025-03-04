@@ -1,5 +1,6 @@
 ---
 import siteConfig from '../consts';
+import Favicon from './Favicon.astro';
 
 interface Props {
 	pageTitle: string | undefined;
@@ -34,6 +35,8 @@ const title = pageTitle
 		<meta property="publishedDate" content={publishedDate.toString()} />
 	)
 }
+
+<Favicon />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />

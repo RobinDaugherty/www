@@ -1,0 +1,56 @@
+html {
+	--color-primary: #2c3e50;
+	--color-secondary: gray;
+	--color-link-hover: #3582b5;
+	--color-link-visited: #311e7d;
+}
+
+/* See MainLayout for font import, where font variables are set. */
+
+body {
+	font-family: var(--font-main);
+	font-weight: var(--font-weight-main);
+	color: var(--color-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-headings);
+	font-weight: var(--font-weight-headings);
+}
+
+strong {
+	font-weight: var(--font-weight-bold);
+}
+
+em {
+	font-style: italic;
+	font-family: var(--font-italic);
+}
+
+tt,
+pre {
+	font-family: var(--font-code);
+	font-weight: var(--font-weight-code);
+}
+
+a,
+a > .link-text {
+	color: var(--color-primary);
+	text-decoration: underline;
+	text-decoration-style: dashed;
+	text-underline-offset: 0.2em;
+	text-decoration-thickness: 0.8pt;
+}
+a:hover,
+a:hover > .link-text {
+	color: var(--color-link-hover);
+}
+a:visited,
+a:visited > .link-text {
+	color: var(--color-link-visited);
+}

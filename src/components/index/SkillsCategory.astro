@@ -1,0 +1,28 @@
+---
+type Props = {
+	name: string;
+};
+
+const { name } = Astro.props;
+---
+
+<h3>{name}</h3>
+<ul>
+	<slot />
+</ul>
+
+<style>
+	h3 {
+		margin: 0;
+		font-size: 0.9em;
+	}
+	ul {
+		display: flex;
+		justify-content: start;
+		list-style: none;
+		gap: 1em;
+		margin: 0.5em 0 1em 1em;
+		padding: 0;
+		flex-wrap: wrap;
+	}
+</style>

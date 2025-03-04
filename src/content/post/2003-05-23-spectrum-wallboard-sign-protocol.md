@@ -44,7 +44,7 @@ commands, ending the entire control message with an EOT character
 
 A sign holds one or more messages in memory, in files with a
 one-character name. You must send a command to reserve memory with the
-name of the file you will be using. This is done with a [Write Special Functions](#Write_Special_Functions) command (see the table).
+name of the file you will be using. This is done with a [Write Special Functions](#write-special-functions) command (see the table).
 
 ## Type Codes
 
@@ -224,7 +224,7 @@ name of the file you will be using. This is done with a [Write Special Functions
 		<tr>
 			<td><tt>A</tt></td>
 			<td><tt>0x41</tt></td>
-			<td>[[#Write Text File|Write Text File]]</td>
+			<td><a href="#write-text-file">Write Text File</a></td>
 		</tr>
 		<tr>
 			<td><tt>B</tt></td>
@@ -234,7 +234,7 @@ name of the file you will be using. This is done with a [Write Special Functions
 		<tr>
 			<td><tt>E</tt></td>
 			<td><tt>0x45</tt></td>
-			<td>[[#Write Special Functions|Write Special Functions]]</td>
+			<td><a href="#write-special-functions">Write Special Functions</a></td>
 		</tr>
 		<tr>
 			<td><tt>F</tt></td>

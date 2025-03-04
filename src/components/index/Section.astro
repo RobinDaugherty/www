@@ -1,0 +1,26 @@
+---
+type Props = {
+	class: string;
+};
+
+const { class: className } = Astro.props;
+---
+
+<section class={className}>
+	<content>
+		<slot />
+	</content>
+</section>
+
+<style>
+	section {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+
+		> container {
+			width: 100%;
+		}
+	}
+</style>

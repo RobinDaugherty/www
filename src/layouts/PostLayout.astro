@@ -1,51 +1,35 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import DefaultLayout from './Default.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-import { Picture } from 'astro:assets';
+import Layout from './MainLayout.astro';
 
 type Props = {
-	post: CollectionEntry<'post'>;
+	pageTitle: string | undefined;
+	pageDescription?: string | undefined;
+	publishedDate?: Date | undefined;
 };
 
-const { post } = Astro.props;
-const { title, description, heroImage, publishedDate, updatedDate } = post.data;
-const { Content } = await post.render();
+const { pageTitle, pageDescription, publishedDate } = Astro.props;
 ---
 
-<DefaultLayout pageTitle={title} pageDescription={description}>
-	<article>
-		<content>
-			<header class="page-header">
-				{
-					heroImage && (
-						<hero>
-							<Picture src={heroImage} alt="" />
-						</hero>
-					)
-				}
-				<h1>{title}</h1>
-				<div class="pub-date">
-					<FormattedDate date={publishedDate} />
-					{
-						updatedDate && (
-							<>
-								{' '}
-								<span>
-									(Updated on <FormattedDate date={updatedDate} />)
-								</span>
-							</>
-						)
-					}
-				</div>
-			</header>
-			<Content />
-			<div class="article-body">
-				<slot />
-				<p><a href="/">Back to root</a></p>
-			</div>
-		</content>
-	</article>
-</DefaultLayout>
+<Layout
+	pageTitle={pageTitle}
+	pageDescription={pageDescription}
+	publishedDate={publishedDate}
+>
+	<h1><a href="/">Robin Daugherty</a></h1>
+	<slot />
+</Layout>
 
-<style lang="scss"></style>
+<style>
+	h1 {
+		font-family: var(--font-headline);
+		font-weight: 400;
+		font-size: 2.5rem;
+		line-height: 3rem;
+		margin: 0;
+		margin-left: -0.07em;
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+</style>

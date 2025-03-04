@@ -21,6 +21,7 @@ $breakpoints: (
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://www.robindaugherty.net',
+	prefetch: true,
 	trailingSlash: 'never',
 	integrations: [mdx(), sitemap(), icon()],
 	markdown: {

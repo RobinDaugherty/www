@@ -1,5 +1,5 @@
 ---
-title: 'How to use Slack effectively in your organization'
+title: 'How to Use Slack Effectively In Your Organization'
 publishedDate: 2020-01-31T18:23:00Z
 tags: [slack]
 category: Soapbox

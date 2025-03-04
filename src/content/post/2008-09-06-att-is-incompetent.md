@@ -1,5 +1,5 @@
 ---
-title: 'at&t Is Incompetent'
+title: 'AT&T Is Incompetent'
 hideFromIndex: true
 publishedDate: 2008-09-06T01:47:00Z
 tags: [complaint]
@@ -63,15 +63,15 @@ Why don't they store that bad boy so I don't have to go look it up?
 
 Requiring the security code is a method of making sure that I have the real card in my hand, and that makes sense for random purchases.
 
-- I'm paying a phone bill!
+- I'm paying a phone bill—for a service at a fixed address.
 
-- They know who I am!
+- They know who I am.
 
-- They know where I live!
+- They know where I live.
 
-- My name is on the credit card!
+- My name is on the credit card.
 
-- And I've used it every single month for over a year!
+- And I've used it every single month for over a year.
 
 I'm left with the impression that AT&T doesn't care a lick for their customer's time.
 Either that, or they are so completely incompetent that they don't even see these problems.

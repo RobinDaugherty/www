@@ -1,13 +1,27 @@
 html {
+	--color-background: white;
+	--color-background-secondary: #eee;
 	--color-primary: #2c3e50;
 	--color-secondary: gray;
 	--color-link-hover: #3582b5;
-	--color-link-visited: #311e7d;
+	--color-link-visited: #4b4a88;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		--color-background: #1c2e3f;
+		--color-background-secondary: #111e2a;
+		--color-primary: white;
+		--color-secondary: lightgray;
+		--color-link-hover: #3582b5;
+		--color-link-visited: #4b4a88;
+	}
 }
 
 /* See MainLayout for font import, where font variables are set. */
 
 body {
+	background-color: var(--color-background);
 	font-family: var(--font-main);
 	font-weight: var(--font-weight-main);
 	color: var(--color-primary);
@@ -45,12 +59,9 @@ a > .link-text {
 	text-decoration-style: dashed;
 	text-underline-offset: 0.2em;
 	text-decoration-thickness: 0.8pt;
-}
-a:hover,
-a:hover > .link-text {
-	color: var(--color-link-hover);
+	text-decoration-color: var(--color-link-hover);
 }
 a:visited,
 a:visited > .link-text {
-	color: var(--color-link-visited);
+	text-decoration-color: var(--color-link-visited);
 }

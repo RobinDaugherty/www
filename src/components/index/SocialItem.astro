@@ -22,7 +22,7 @@ const { name, url, iconName, brandColor } = Astro.props;
 		margin: 0;
 
 		a {
-			color: white;
+			color: var(--color-background);
 			background-color: var(--color-primary);
 			display: inline-block;
 			width: 3rem;
@@ -41,6 +41,13 @@ const { name, url, iconName, brandColor } = Astro.props;
 
 		&:hover a {
 			background-color: var(--brand-color);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			&:hover a {
+				background-color: var(--color-primary);
+				color: var(--brand-color);
+			}
 		}
 	}
 </style>

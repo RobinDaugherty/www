@@ -5,6 +5,8 @@ tags: [docker]
 category: Tech
 ---
 
+import ExternalLink from '../../components/ExternalLink.astro';
+
 In my work I need to write/design docker images for my projects that will be deployed.
 I try not to use Docker for my development itself because of the way that Docker has historically worked on macOS.
 
@@ -12,18 +14,18 @@ Docker Desktop on Mac is a terrible experience.
 The desktop app itself is an Electron app, so it loads _yet another_ copy of Chrome, eating memory and adding more CPU load.
 You have to allocate an amount of memory to the container process, and that memory will always be occupied unless you fully stop Docker Desktop.
 
-I used [colima](https://github.com/abiosoft/colima) for a while, and that works well, as long as you remember to stop it when you're not using Docker.
+I used {<ExternalLink href='https://github.com/abiosoft/colima'>Colima</ExternalLink>} for a while, and that works well, as long as you remember to stop it when you're not using Docker.
 
 Like Docker Desktop, it runs Docker's containerd inside of a Linux virtual machine, which requires a chunk of allocated memory.
 
 It's a big improvement over Docker Desktop, as long as you're comfortable using the command line for everything—something that I have to do anyway when managing server deployment.
 
-But recently, I discovered [Orbstack](https://orbstack.dev).
+But recently, I discovered {<ExternalLink href="https://orbstack.dev">Orbstack</ExternalLink>}.
 
 Instead of an Electron app, it's a native Mac app.
 They somehow manage to run the container processes without a virtual machine.
 
-It has a few [other advantages](https://docs.orbstack.dev/compare/docker-desktop).
+It has a few {<ExternalLink href="https://docs.orbstack.dev/compare/docker-desktop">other advantages</ExternalLink>}.
 Maybe give it a try.
 
-Demand good experience for your development tools—you're worth it!
+Demand good experience from your development tools—you're worth it!
